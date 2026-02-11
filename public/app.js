@@ -1,4 +1,6 @@
-const socket = io();
+const socket = io({
+  path: '/grocery/socket.io'
+});
 const textarea = document.getElementById('list');
 
 let ignoreUpdate = false;

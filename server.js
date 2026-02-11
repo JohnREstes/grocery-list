@@ -5,7 +5,9 @@ import { Server } from 'socket.io';
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+  path: '/grocery/socket.io'
+});
 
 const PORT = 3040;
 const DATA_FILE = './list.json';
